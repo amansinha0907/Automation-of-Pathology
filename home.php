@@ -1,0 +1,42 @@
+<h1>Welcome to <?php echo $_settings->info('name') ?> - User Panel</h1>
+<hr class="border-info">
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="info-box bg-gradient-light shadow">
+            <span class="info-box-icon bg-gradient-navy elevation-1"><i class="fas fa-calendar"></i></span>
+
+            <div class="info-box-content">
+            <span class="info-box-text"><a href="/odlms/?page=appointments">Booked Appointment</span>
+            <span class="info-box-number text-right">
+                <?php 
+                    echo $conn->query("SELECT * FROM `appointment_list` where client_id = '{$_settings->userdata('id')}' ")->num_rows;
+                ?>
+            </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+
+    
+
+
+        <!-- /.info-box -->
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="info-box bg-gradient-light shadow">
+            <span class="info-box-icon bg-gradient-maroon elevation-1"><i class="fas fa-vial"></i></span>
+
+            <div class="info-box-content">
+            <span class="info-box-text"><a href="/odlms/?page=reports">Finished Test</span>
+            <span class="info-box-number text-right">
+                <?php 
+                    echo $conn->query("SELECT * FROM `appointment_list` where client_id = '{$_settings->userdata('id')}' and status = 6 ")->num_rows;
+                ?>
+            </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+</div>
+<hr>
