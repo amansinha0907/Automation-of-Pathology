@@ -109,6 +109,23 @@ ix)  Delete Appointment/Test Records
 **f)Logout**
 
 
+**System Snapshots of some Features**
+
+1)Dashboard (User-Side)
+
+
+2)Appointment Details (User-Side)
+
+
+3)Test Result List Page (User-Side)
+
+
+4)Admin Dashboard (Admin-Side)
+
+
+5)Booked Appointment List (Admin-Side)
+
+
 Cretain manual functioning have to be done to access it, they are as follows:-
 
 A) **Requirements**
